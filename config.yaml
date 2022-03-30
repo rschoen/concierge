@@ -1,0 +1,39 @@
+---
+# which services to use, and login credentials for each
+services:
+  resy:
+    enabled: true
+    username: username
+    password: password
+  opentable:
+    enabled: false
+    username: username
+    password: password
+  tock:
+    enabled: false
+    username: username
+    password: password
+
+# which restaurants to scan for. see venues.yaml for valid entries
+venues:
+  - bar crudo
+
+# which dates to begin looking for. dates in the past will be ignored
+dates:
+  - 2022-04-17
+  - 2022-04-18
+
+# desired times for reservation. integers only, 24-hour format
+earliest start hour: 18
+latest start hour: 20
+
+# how many people to make the reservation for
+diners: 2
+
+# how often to check for new reservations, in minutes
+check interval minutes: 60
+
+# amount to "randomize" the check interval. for example, if this
+# is 0.25, the script will check every interval +/- 25% of that
+# interval. valid range is 0.0 to 1.0
+interval fudge factor: 0.25
