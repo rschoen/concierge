@@ -2,13 +2,16 @@
 # which services to use, and login credentials for each
 services:
   resy:
-    enabled: true
-    username: username
-    password: password
-  opentable:
     enabled: false
     username: username
     password: password
+  opentable:
+    enabled: true
+    phone: 1234567890
+    email: email@email.email
+    first_name: John
+    last_name: Doe
+    bearer_token: wowthisisgonnabeareallylongstringofcharacters
   tock:
     enabled: false
     username: username
@@ -16,7 +19,7 @@ services:
 
 # which restaurants to scan for. see venues.yaml for valid entries
 venues:
-  - bar crudo
+  - indian oven
 
 # which dates to begin looking for. dates in the past will be ignored
 dates:

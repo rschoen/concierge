@@ -141,10 +141,10 @@ def main():
 
 				reservation_time = None
 
-				try:
-					reservation_time = services[service_mappings[venue]["service"]].try_to_reserve(venue_id,date,config["diners"],config["earliest start hour"],config["latest start hour"])
-				except Exception as e:
-					print("Unexpected error making reservation: "+str(e))
+				#try:
+				reservation_time = services[service_mappings[venue]["service"]].try_to_reserve(venue_id,date,config["diners"],config["earliest start hour"],config["latest start hour"])
+				#except Exception as e:
+				#	print("Unexpected error making reservation: "+str(e))
 
 				if reservation_time != None:
 					print("Successfully reserved "+venue+" on "+date.isoformat()+" at "+str(reservation_time)+" for "+str(config["diners"])+" diners.")
